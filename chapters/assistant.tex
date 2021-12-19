@@ -302,7 +302,7 @@ The SVC model has the highest average accuracy and successfully manages to recal
 \end{figure}
 The intuition for using this function to combine the two metrics is that it prioritizes parallelizable long-running loops and scales down the weight of non-parallelizable loops irrespective of their contribution to execution time. The effect of this can be seen in Figure \ref{fig:ft_loop_ranking} for the loops of the FT benchmark.
 \begin{figure}[htb!]
-\includegraphics[width=1.0\textwidth]{images/ft_filter_nums.pdf}
+\includegraphics[width=1.0\textwidth]{images/ft_filter.pdf}
 \caption{Change of loop rankings with the application of the assistant ranking function for the 46 loops of the FT benchmark. Ranking based on loop execution time alone (top figure) results in some high-ranked, but non-parallelizable loops. Combining profiled execution time and parallelizability in a single score (middle figure) results in a ranking that prioritizes parallelizable loops (bottom figure).}
 \label{fig:ft_loop_ranking}
 \end{figure}
